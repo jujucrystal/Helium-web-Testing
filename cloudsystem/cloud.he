@@ -12,7 +12,8 @@ press(ENTER)
 click("Cloud systems")
 press("Contact Us")
 click("Contact Us")
-if 'Cloudsystems.sa' in get_driver().title:
+if 'Contact Us' in get_driver().title:
 	print 'Test passed!'
 else:
 	print 'Test failed :('
+kill_browser()
