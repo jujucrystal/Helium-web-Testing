@@ -1,0 +1,18 @@
+"""
+This script uses Helium to automatically perform a bing search for the term
+"Cloudsystems.sa", and opens the Contact Us page. If all goes well, it
+prints "Test passed!". Otherwise, it prints "Test failed :(".
+"""
+
+
+
+start_chrome("www.bing.com")
+write("Cloudsystems.sa")
+press(ENTER)
+click("Cloud systems")
+press("Contact Us")
+click("Contact Us")
+if 'Cloudsystems.sa' in get_driver().title:
+	print 'Test passed!'
+else:
+	print 'Test failed :('
